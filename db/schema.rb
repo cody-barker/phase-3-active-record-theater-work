@@ -10,17 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_26_162514) do
+ActiveRecord::Schema.define(version: 2023_04_26_164328) do
 
   create_table "auditions", force: :cascade do |t|
     t.string "actor"
     t.string "location"
     t.integer "phone"
     t.boolean "hired"
+    t.integer "role_id"
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string "character"
+    t.string "character_name"
   end
 
 end
